@@ -1,23 +1,18 @@
 {
-	"name": "Podoma",
-	"short_name": "PDM",
-	"description": "The OpenStreetMap statistics engine",
+	"name": "Suivi Enedis",
+	"short_name": "enedis",
+	"description": "Catalyseur d'énergies pour OpenStreetMap",
 	"start_url": "/",
 	"display": "standalone",
 	"background_color": "#95DAEC",
-	"lang": "en",
-	"categories": ["games","navigation"],
+	"lang": "fr",
+	"categories": ["cartography","technology"],
 	"orientation": "portrait-primary",
 	"icons": [
 		{
-			"src": "/images/favicon.192.png",
-			"type": "image/png",
-			"sizes": "192x192"
-		},
-		{
-			"src": "/images/favicon.512.png",
-			"type": "image/png",
-			"sizes": "512x512"
+			"src": "/images/favicon.svg",
+			"type": "image/svg+xml",
+			"sizes": "48x48 72x72 192x192 512x512"
 		}
 	]
 }
