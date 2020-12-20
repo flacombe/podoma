@@ -1,0 +1,34 @@
+{
+	"id": 3,
+	"init_slot": 2,
+	"name": "2021-01_lines",
+	"title": "Lignes électriques",
+	"start_date": "2020-10-01",
+	"end_date": null,
+	"summary": "Les lignes électriques sont omniprésentes dans le paysage. Les repérer facilite leur maintenance et leur adaptation au changement climatique sera mieux priorisé.",
+	"links": {
+		"osmwiki": "https://wiki.openstreetmap.org/wiki/Power_networks/France#R.C3.A9seaux_de_distribution",
+		"osmblog": "https://www.openstreetmap.fr/adaptation-reseaux-electriques-changement-climatique-openstreetmap/",
+		"osmforum": "https://forum.openstreetmap.fr/t/identification-de-poteaux-et-lignes-electriques-aeriennes/6966"
+	},
+	"database": {
+		"osmium_tag_filter": "w/operator=Enedis&w/power=minor_line,cable",
+		"live": true,
+		"members_from": "2021-01_poteaux"
+	},
+	"datasources": [
+		{
+			"source": "stats",
+			"tiles": ["https://enedis.openstreetmap.fr/tiles/pdm_stats_lines/{z}/{x}/{y}.mvt"],
+			"layers": ["pdm_stats_lines"],
+			"name": "Statistiques géographiques"
+		}
+	],
+	"statistics": {
+		"count": true,
+		"length": true,
+		"feature_name": "poteaux",
+		"points": { "add": 3, "edit": 1, "edit-in": 1 },
+		"osmose_tasks": "Poteaux intégrés depuis l'opendata"
+	}
+}
