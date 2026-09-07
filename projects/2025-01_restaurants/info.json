@@ -1,0 +1,62 @@
+{
+	"id": 53,
+	"name": "2025-01_restaurants",
+	"title": "Restaurants",
+	"start_date": "2015-01-01",
+	"soft_end_date": "2026-09-30",
+	"summary": "Test de suivi de la cartographie des restaurants",
+	"links": {
+		
+	},
+	"database": {
+		"osmium_tag_filter": "nwr/amenity=restaurant",
+		"live": false
+	},
+	"datasources": [
+		{
+			"source": "osmose",
+			"item": "8240",
+			"class": null,
+			"country": "france*",
+			"name": "Restaurants à intégrer",
+			"description": "Ce restaurant est manquant sur OSM, vous pouvez l'ajouter.",
+			"color": "#4A148C",
+			"buttons": { "edit": "Compléter ce restarant" }
+		},
+		{
+			"source": "background",
+			"tiles": [ "https://data.geopf.fr/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&STYLE=normal&FORMAT=image/jpeg&TILEMATRIXSET=PM_0_19&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}" ],
+			"name": "Vue aérienne (Bd Ortho)",
+			"icon": "aerial",
+			"attribution": "<a href=\"https://openstreetmap.fr/bdortho\" target=\"_blank\">&copy; BDOrtho IGN</a>"
+		},
+		{
+			"source": "background",
+			"tiles": [ "https://data.geopf.fr/tms/1.0.0/ORTHOIMAGERY.ORTHOPHOTOS.ORTHO-EXPRESS.2025/{z}/{x}/{y}.jpeg" ],
+			"name": "Vue aérienne (Ortho Express 2025)",
+			"icon": "aerial",
+			"attribution": "<a href=\"https://openstreetmap.fr/bdortho\" target=\"_blank\">&copy; Ortho Express IGN 2025</a>"
+		},
+		{
+			"source": "background",
+			"tiles": [ "https://a.tile.openstreetmap.fr/bdtopo/{zoom}/{x}/{y}.png" ],
+			"name": "Calque BD Topo",
+			"icon": "other",
+			"attribution": "<a href=\"https://geoservices.ign.fr/documentation/diffusion/telechargement-donnees-libres.html\" target=\"_blank\">&copy; cquest@Openstreetmap France, data &copy; IGN BD Topo, LO/OL</a>"
+		},
+		{ "source": "stats" }
+	],
+	"statistics": {
+		"count": true,
+		"length": false,
+		"feature_name": "restaurants",
+		"osmose_tasks": "restaurants à intégrer",
+		"points": { "add": 3, "edit": 1, "note": 1 }
+	},
+	"editors": {
+		"all": {
+			"comment": "Ajout de restaurants",
+			"hashtags": "projetdumois"
+		}
+	}
+}
